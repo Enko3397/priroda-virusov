@@ -10,3 +10,13 @@ themeToggleBtn.addEventListener('click', () => {
     themeToggleBtn.textContent = 'Переключить на светлую тему';
   }
 });
+
+// Обработчики для кнопок "Узнать больше", "Посмотреть схему" и "Изучить процессы"
+document.addEventListener("DOMContentLoaded", () => {
+  const actionBtns = document.querySelectorAll('.action-btn');
+  actionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert('Информация будет добавлена позже!');
+    });
+  });
+});
