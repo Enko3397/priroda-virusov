@@ -1,26 +1,16 @@
-// Функция для взаимодействия с пользователем
-function displayMessage() {
-  alert("Вы узнали интересные факты о клетках!");
-}
-
-// Добавление обработчиков событий на элементы
 document.addEventListener("DOMContentLoaded", () => {
-  // Обработчик для всех разделов
-  const sections = document.querySelectorAll("section");
-  sections.forEach((section) => {
-    section.addEventListener("click", () => {
-      console.log(`Вы кликнули на раздел: ${section.id}`);
-      displayMessage();
+  // Обработчики для кнопок
+  const actionBtns = document.querySelectorAll('.action-btn');
+  actionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert('Подробности будут добавлены позже!');
     });
   });
 
-  // Пример: динамическая смена фона при наведении
-  const introSection = document.getElementById("intro");
-  introSection.addEventListener("mouseenter", () => {
-    introSection.style.backgroundColor = "#d1e7ff";
-  });
-
-  introSection.addEventListener("mouseleave", () => {
-    introSection.style.backgroundColor = "white";
+  const infoBtns = document.querySelectorAll('.info-btn');
+  infoBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`Информация о клетке: ${btn.textContent}`);
+    });
   });
 });
