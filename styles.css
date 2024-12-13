@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Обновленные глобальные стили */
 * {
   margin: 0;
   padding: 0;
@@ -6,45 +6,46 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
   color: #f5f5f5;
-  background: #121212;
+  line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
+.wrapper {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 header h1 {
   font-size: 2.5rem;
   color: #ffffff;
+  margin-bottom: 10px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  gap: 30px;
 }
 
 nav ul li {
-  margin: 0 20px;
+  margin: 0;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #f5f5f5;
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: #ffffff;
+  font-size: 1.1rem;
   transition: color 0.3s;
 }
 
@@ -52,38 +53,33 @@ nav ul li a:hover {
   color: #0066cc;
 }
 
-button {
+.theme-toggle-btn {
+  margin-top: 20px;
   background-color: #333;
   color: #f5f5f5;
-  border: 1px solid #444;
+  border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
 }
 
-button:hover {
+.theme-toggle-btn:hover {
   background-color: #0066cc;
-  color: #ffffff;
 }
 
-button.theme-toggle-btn {
-  margin-top: 20px;
-  background-color: #444;
-}
-
-section {
-  background: #1c1c1c;
+/* Стили для разделов */
+.section {
+  background-color: #1e1e1e;
   padding: 30px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-section:hover {
-  background-color: #333;
+.section:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -92,22 +88,38 @@ h2 {
   margin-bottom: 15px;
 }
 
+button.action-btn {
+  background-color: #333;
+  color: #f5f5f5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+button.action-btn:hover {
+  background-color: #0066cc;
+}
+
+.card {
+  background-color: #2d2d2d;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: #333;
+}
+
 footer {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 0.9rem;
   color: #777;
 }
-
-footer a {
-  color: #777;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #0066cc;
-}
-
-
 
 
