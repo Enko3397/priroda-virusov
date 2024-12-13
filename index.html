@@ -1,63 +1,58 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Природа Вирусов</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Virus Information</title>
+    <link href="styles.css" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Природа Вирусов</h1>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Введение</a></li>
-                    <li><a href="#types">Типы вирусов</a></li>
-                    <li><a href="#fight">Как бороться</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Understanding Viruses</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#viruses">Viruses</a></li>
+                <li><a href="#prevention">Prevention</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section id="intro">
-            <h2>Что такое вирусы?</h2>
-            <p>Вирусы — это мельчайшие организмы, способные заражать клетки других организмов и использовать их ресурсы для размножения. Они имеют уникальные формы и структуры, а также могут быть как безвредными, так и чрезвычайно опасными.</p>
+    <main>
+        <section id="about" class="section">
+            <h2>About Viruses</h2>
+            <p>Viruses are microscopic organisms that can cause various diseases in humans, animals, and plants. They are unique due to their inability to reproduce without a host cell.</p>
         </section>
 
-        <section id="types">
-            <h2>Типы вирусов</h2>
+        <section id="viruses" class="section">
+            <h2>Learn About Viruses</h2>
             <div class="virus-list">
-                <div class="virus" onclick="showInfo('flu')">Вирус гриппа</div>
-                <div class="virus" onclick="showInfo('hepatitis')">Вирус гепатита</div>
-                <div class="virus" onclick="showInfo('hiv')">Вирус ВИЧ</div>
+                <div class="virus" data-virus="flu">Influenza</div>
+                <div class="virus" data-virus="hepatitis">Hepatitis</div>
+                <div class="virus" data-virus="hiv">HIV</div>
             </div>
             <div id="virus-info" class="info hidden">
-                <h3>Информация о вирусе</h3>
-                <p id="virus-description">Выберите вирус, чтобы узнать подробности.</p>
+                <h3>Virus Information</h3>
+                <p id="virus-description">Select a virus to learn more.</p>
             </div>
         </section>
 
-        <section id="fight">
-            <h2>Как бороться с вирусами?</h2>
-            <p>Эффективная борьба с вирусами включает вакцинацию, соблюдение гигиены и использование антивирусных препаратов. Соблюдение этих мер поможет защитить вас и ваших близких.</p>
-            <button onclick="togglePreventionTips()">Показать советы</button>
+        <section id="prevention" class="section">
+            <h2>Prevention Tips</h2>
+            <button id="toggle-tips">Show Tips</button>
             <ul id="prevention-tips" class="hidden">
-                <li>Мойте руки с мылом не менее 20 секунд.</li>
-                <li>Используйте маски в период эпидемий.</li>
-                <li>Соблюдайте дистанцию в общественных местах.</li>
-                <li>Избегайте контакта с больными людьми.</li>
-                <li>Проводите дезинфекцию предметов общего пользования.</li>
+                <li>Wash your hands regularly with soap and water.</li>
+                <li>Avoid close contact with sick individuals.</li>
+                <li>Get vaccinated when vaccines are available.</li>
+                <li>Maintain a healthy diet to support your immune system.</li>
+                <li>Disinfect surfaces regularly.</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Природа вирусов. Все права защищены.</p>
-        </div>
+        <p>© 2024 Interactive Virus Info</p>
     </footer>
 </body>
 </html>
