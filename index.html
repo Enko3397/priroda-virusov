@@ -5,54 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Природа Вирусов</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Природа Вирусов</h1>
-        <nav>
-            <ul>
-                <li><a href="#intro">Введение</a></li>
-                <li><a href="#types">Типы вирусов</a></li>
-                <li><a href="#fight">Как бороться</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Природа Вирусов</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Введение</a></li>
+                    <li><a href="#types">Типы вирусов</a></li>
+                    <li><a href="#fight">Как бороться</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="intro">
-        <h2>Что такое вирусы?</h2>
-        <p>Вирусы — это микроорганизмы, которые могут заражать живые клетки и использовать их для своего размножения. Они имеют уникальную структуру и способы воздействия на организмы.</p>
-    </section>
+    <main class="container">
+        <section id="intro">
+            <h2>Что такое вирусы?</h2>
+            <p>Вирусы — это мельчайшие организмы, способные заражать клетки других организмов и использовать их ресурсы для размножения. Они имеют уникальные формы и структуры, а также могут быть как безвредными, так и чрезвычайно опасными.</p>
+        </section>
 
-    <section id="types">
-        <h2>Типы вирусов</h2>
-        <div class="virus-container">
-            <div class="virus" onclick="toggleInfo('virus1')">Вирус гриппа</div>
-            <div class="virus" onclick="toggleInfo('virus2')">Вирус гепатита</div>
-            <div class="virus" onclick="toggleInfo('virus3')">Вирус ВИЧ</div>
-        </div>
-        <div id="virus-info" class="virus-info hidden">
-            <p>Информация о вирусе.</p>
-        </div>
-    </section>
+        <section id="types">
+            <h2>Типы вирусов</h2>
+            <div class="virus-list">
+                <div class="virus" onclick="showInfo('flu')">Вирус гриппа</div>
+                <div class="virus" onclick="showInfo('hepatitis')">Вирус гепатита</div>
+                <div class="virus" onclick="showInfo('hiv')">Вирус ВИЧ</div>
+            </div>
+            <div id="virus-info" class="info hidden">
+                <h3>Информация о вирусе</h3>
+                <p id="virus-description">Выберите вирус, чтобы узнать подробности.</p>
+            </div>
+        </section>
 
-    <section id="fight">
-        <h2>Как бороться с вирусами?</h2>
-        <p>Для борьбы с вирусами важно соблюдать профилактические меры, использовать вакцины и лекарства. Вакцинация и соблюдение личной гигиены играют ключевую роль.</p>
-        <button onclick="showPreventionTips()">Советы по профилактике</button>
-        <div id="prevention-tips" class="hidden">
-            <ul>
-                <li>Регулярно мойте руки.</li>
-                <li>Применяйте вакцины.</li>
-                <li>Избегайте контактов с больными людьми.</li>
+        <section id="fight">
+            <h2>Как бороться с вирусами?</h2>
+            <p>Эффективная борьба с вирусами включает вакцинацию, соблюдение гигиены и использование антивирусных препаратов. Соблюдение этих мер поможет защитить вас и ваших близких.</p>
+            <button onclick="togglePreventionTips()">Показать советы</button>
+            <ul id="prevention-tips" class="hidden">
+                <li>Мойте руки с мылом не менее 20 секунд.</li>
+                <li>Используйте маски в период эпидемий.</li>
+                <li>Соблюдайте дистанцию в общественных местах.</li>
+                <li>Избегайте контакта с больными людьми.</li>
+                <li>Проводите дезинфекцию предметов общего пользования.</li>
             </ul>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Природа вирусов. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2024 Природа вирусов. Все права защищены.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
