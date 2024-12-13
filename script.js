@@ -1,18 +1,22 @@
-// Показ информации о вирусах
-const virusData = {
-    flu: "Вирус гриппа вызывает острые респираторные инфекции. Симптомы включают высокую температуру, кашель, боль в горле, насморк, головную боль и усталость. Он передается воздушно-капельным путем. Грипп может приводить к осложнениям, включая пневмонию. Для профилактики рекомендуется вакцинация. Также важно соблюдать гигиену рук. Лечение включает противовирусные препараты. Вирус мутирует ежегодно, что требует обновления вакцин. Эпидемии гриппа могут быть сезонными. Его изучение помогает предотвращать распространение.",
-    hepatitis: "Вирус гепатита поражает печень. Симптомы варьируются от легкой усталости до серьезных проблем с печенью. Существует несколько типов: A, B, C, D и E. Основные пути передачи включают кровь, загрязненные продукты и воду. Гепатит B и C могут вызывать хронические заболевания. Вакцинация доступна для типов A и B. Лечение зависит от типа вируса. Хронический гепатит может привести к циррозу или раку печени. Соблюдение гигиены и безопасное использование игл помогают предотвратить заражение. Исследования продолжаются для разработки новых методов лечения.",
-    hiv: "Вирус иммунодефицита человека (ВИЧ) атакует иммунную систему. Он передается через кровь, половые контакты и от матери к ребенку. Без лечения ВИЧ может привести к СПИДу. На ранних стадиях симптомы включают лихорадку, сыпь и усталость. Для контроля инфекции используются антиретровирусные препараты. Вакцины пока не существует, но профилактические меры включают использование презервативов и регулярное тестирование. Современные лекарства позволяют пациентам с ВИЧ жить полноценной жизнью. Ранняя диагностика улучшает прогноз. Исследования направлены на поиск полного излечения.",
-};
+    const virusData = {
+        flu: "Influenza is a contagious respiratory illness caused by flu viruses. Symptoms include fever, cough, and body aches. It spreads through respiratory droplets and surfaces.",
+        hepatitis: "Hepatitis affects the liver and can cause symptoms like jaundice, fatigue, and abdominal pain. It can be caused by viruses, alcohol, or toxins.",
+        hiv: "HIV attacks the immune system, specifically CD4 cells. Without treatment, it can lead to AIDS. It spreads through blood, semen, and other bodily fluids."
+    };
 
-function showInfo(virus) {
-    const description = virusData[virus] || "Информация недоступна.";
-    document.getElementById("virus-description").textContent = description;
-    document.getElementById("virus-info").classList.remove("hidden");
-}
+    virusElements.forEach(virus => {
+        virus.addEventListener("click", () => {
+            const virusKey = virus.dataset.virus;
+            virusDescription.textContent = virusData[virusKey] || "Information not available.";
+            virusInfo.classList.remove("hidden");
+        });
+    });
 
-// Показ/скрытие советов по профилактике
-function togglePreventionTips() {
-    const tips = document.getElementById("prevention-tips");
-    tips.classList.toggle("hidden");
-}
+    const toggleTipsButton = document.getElementById("toggle-tips");
+    const preventionTips = document.getElementById("prevention-tips");
+
+    toggleTipsButton.addEventListener("click", () => {
+        preventionTips.classList.toggle("hidden");
+        toggleTipsButton.textContent = preventionTips.classList.contains("hidden") ? "Show Tips" : "Hide Tips";
+    });
+});
