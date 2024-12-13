@@ -1,29 +1,135 @@
-function toggleInfo(virus) {
-    const info = document.getElementById('virus-info');
-    let text = '';
-
-    if (virus === 'virus1') {
-        text = `
-            <h3>Вирус гриппа</h3>
-            <p>Вирус гриппа — это инфекционное заболевание, вызываемое вирусами семейства Orthomyxoviridae. Он передается воздушно-капельным путем и вызывает высокую температуру, кашель, головную боль и ломоту в теле. Грипп может быть опасен для людей с ослабленным иммунитетом и для пожилых людей. Для профилактики вируса рекомендуется вакцинация, а также регулярная дезинфекция рук. Важно избегать контакта с больными людьми в период эпидемий.</p>
-        `;
-    } else if (virus === 'virus2') {
-        text = `
-            <h3>Вирус гепатита</h3>
-            <p>Вирус гепатита вызывает воспаление печени и может привести к хроническим заболеваниям. Гепатит чаще всего передается через кровь или при контакте с инфицированными жидкостями. Симптомы включают желтуху, утомляемость и боли в животе. Для профилактики существует вакцина, которая защищает от гепатита А и В. Гепатит C чаще всего требует длительного лечения, и вакцины для него пока не существует.</p>
-        `;
-    } else if (virus === 'virus3') {
-        text = `
-            <h3>Вирус ВИЧ</h3>
-            <p>Вирус иммунодефицита человека (ВИЧ) ослабляет иммунную систему человека, делая его более уязвимым к инфекциям. ВИЧ передается через кровь, сперму и другие биологические жидкости. Он может привести к заболеванию СПИД, если не принимать антиретровирусные препараты. Вакцины от ВИЧ пока не существует, но современные лекарства могут контролировать вирус и предотвращать его распространение. Для профилактики необходимо использовать защиту при половых актах и избегать общих игл.</p>
-        `;
-    }
-
-    info.innerHTML = text;
-    info.classList.remove('hidden');
+/* Общий стиль */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-function showPreventionTips() {
-    const tips = document.getElementById('prevention-tips');
-    tips.classList.toggle('hidden');
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Основной контент */
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Список вирусов */
+.virus-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.virus {
+    background-color: #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.virus:hover {
+    background-color: #ddd;
+    transform: translateY(-5px);
+}
+
+/* Информация о вирусе */
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Список советов */
+#prevention-tips {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#prevention-tips li {
+    margin-bottom: 8px;
+}
+
+/* Футер */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
