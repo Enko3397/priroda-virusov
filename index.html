@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Природа Вирусов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Природа Вирусов</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Введение</a></li>
+                <li><a href="#types">Типы вирусов</a></li>
+                <li><a href="#fight">Как бороться</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Что такое вирусы?</h2>
+        <p>Вирусы — это микроорганизмы, которые могут заражать живые клетки и использовать их для собственного размножения. Они играют важную роль в экосистемах, но могут быть опасными для здоровья.</p>
+        <button id="more-info-btn">Узнать больше</button>
+        <div id="more-info" class="hidden">
+            <p>Вирусы могут заражать людей, животных, растения, а также микроорганизмы. Каждый вирус имеет свою уникальную структуру и механизм заражения.</p>
+        </div>
+    </section>
+
+    <section id="types">
+        <h2>Типы вирусов</h2>
+        <div class="virus-container">
+            <div class="virus" id="virus1" onclick="showInfo('virus1')">Вирус 1</div>
+            <div class="virus" id="virus2" onclick="showInfo('virus2')">Вирус 2</div>
+            <div class="virus" id="virus3" onclick="showInfo('virus3')">Вирус 3</div>
+        </div>
+        <div id="virus-info" class="virus-info hidden">
+            <p>Информация о вирусе.</p>
+        </div>
+    </section>
+
+    <section id="fight">
+        <h2>Как бороться с вирусами?</h2>
+        <p>Для борьбы с вирусами важно соблюдать гигиену, использовать вакцины и следить за состоянием здоровья.</p>
+        <button id="interaction-btn">Попробовать</button>
+        <div id="interaction" class="hidden">
+            <p>Выберите действие: Применить вакцину или использовать антивирусные средства.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Природа вирусов. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
