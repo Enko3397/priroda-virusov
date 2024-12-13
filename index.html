@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
+  <div class="wrapper">
+    <header class="header">
       <h1>Клетки человека</h1>
       <nav>
         <ul>
@@ -21,33 +21,41 @@
       <button class="theme-toggle-btn">Переключить тему</button>
     </header>
 
-    <section id="intro">
-      <h2>Что такое клетки?</h2>
-      <p>Клетки — это строительные блоки жизни. Каждая клетка выполняет свою уникальную функцию в организме человека, поддерживая его жизнь и здоровье.</p>
-      <button class="action-btn">Узнать больше</button>
-    </section>
+    <main>
+      <section id="intro" class="section">
+        <h2>Что такое клетки?</h2>
+        <p>Клетки — это основные единицы жизни, которые составляют все живые организмы. Каждая клетка выполняет важные функции для поддержания жизни.</p>
+        <button class="action-btn">Узнать больше</button>
+      </section>
 
-    <section id="types">
-      <h2>Типы клеток</h2>
-      <ul>
-        <li><button class="info-btn">Эпителиальные клетки</button></li>
-        <li><button class="info-btn">Нервные клетки</button></li>
-        <li><button class="info-btn">Мышечные клетки</button></li>
-        <li><button class="info-btn">Кровяные клетки</button></li>
-      </ul>
-    </section>
+      <section id="types" class="section">
+        <h2>Типы клеток</h2>
+        <div class="card">
+          <h3>Эпителиальные клетки</h3>
+          <p>Эти клетки образуют защитные слои на поверхности тела и внутренних органов.</p>
+        </div>
+        <div class="card">
+          <h3>Нервные клетки</h3>
+          <p>Нервные клетки (нейроны) отвечают за передачу сигналов в организме.</p>
+        </div>
+        <div class="card">
+          <h3>Мышечные клетки</h3>
+          <p>Мышечные клетки обеспечивают сокращение тканей для движения.</p>
+        </div>
+      </section>
 
-    <section id="structure">
-      <h2>Строение клетки</h2>
-      <p>Каждая клетка состоит из нескольких ключевых компонентов: мембраны, ядра, цитоплазмы и органелл. Эти элементы помогают клетке выполнять свои функции.</p>
-      <button class="action-btn">Посмотреть схему</button>
-    </section>
+      <section id="structure" class="section">
+        <h2>Строение клетки</h2>
+        <p>Основные компоненты клетки: мембрана, ядро, митохондрии, рибосомы. Каждый из этих элементов выполняет свою роль в поддержке жизни клетки.</p>
+        <button class="action-btn">Посмотреть схему</button>
+      </section>
 
-    <section id="processes">
-      <h2>Процессы в клетке</h2>
-      <p>В клетке происходят важнейшие биологические процессы, такие как митоз, синтез белков и обмен веществ.</p>
-      <button class="action-btn">Изучить процессы</button>
-    </section>
+      <section id="processes" class="section">
+        <h2>Процессы в клетке</h2>
+        <p>В клетке происходят важные биологические процессы, такие как синтез белков, клеточное деление и обмен веществ.</p>
+        <button class="action-btn">Изучить процессы</button>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2024 Клетки человека. Все права защищены.</p>
