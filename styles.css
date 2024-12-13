@@ -1,16 +1,27 @@
 /* Основные стили */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6e7dff, #7fffd4);
+  color: #333;
 }
 
 header {
-  background-color: #0044cc;
+  background: rgba(0, 68, 204, 0.8);
   color: white;
   padding: 20px;
   text-align: center;
+  border-bottom: 4px solid #003366;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 nav ul {
@@ -20,22 +31,56 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
 }
 
 section {
-  padding: 20px;
+  padding: 30px;
+  margin: 20px 10%;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+section:hover {
+  background: #f0f8ff;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+section p, ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 footer {
-  background-color: #0044cc;
+  background-color: #003366;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
 }
+
+ul li {
+  margin-bottom: 10px;
+}
+
 
