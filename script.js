@@ -1,22 +1,9 @@
-    const virusData = {
-        flu: "Influenza is a contagious respiratory illness caused by flu viruses. Symptoms include fever, cough, and body aches. It spreads through respiratory droplets and surfaces.",
-        hepatitis: "Hepatitis affects the liver and can cause symptoms like jaundice, fatigue, and abdominal pain. It can be caused by viruses, alcohol, or toxins.",
-        hiv: "HIV attacks the immune system, specifically CD4 cells. Without treatment, it can lead to AIDS. It spreads through blood, semen, and other bodily fluids."
-    };
+document.addEventListener("DOMContentLoaded", () => {
+    const virusInfo = document.getElementById("virus-info");
+    const tips = document.getElementById("prevention-tips");
+    const toggleTipsBtn = document.getElementById("toggle-tips");
 
-    virusElements.forEach(virus => {
-        virus.addEventListener("click", () => {
-            const virusKey = virus.dataset.virus;
-            virusDescription.textContent = virusData[virusKey] || "Information not available.";
-            virusInfo.classList.remove("hidden");
-        });
-    });
-
-    const toggleTipsButton = document.getElementById("toggle-tips");
-    const preventionTips = document.getElementById("prevention-tips");
-
-    toggleTipsButton.addEventListener("click", () => {
-        preventionTips.classList.toggle("hidden");
-        toggleTipsButton.textContent = preventionTips.classList.contains("hidden") ? "Show Tips" : "Hide Tips";
-    });
-});
+    const virusDescriptions = {
+        1: "Коронавирус — это вирус, вызывающий заболевания дыхательных путей. Он распространился по всему миру в 2019 году. Коронавирусы могут вызывать лёгкие и тяжёлые инфекции. Вирус передаётся через капли при кашле и чихании. Основной способ защиты — маска и дезинфекция рук. Вакцинация снижает риск тяжёлого течения болезни. Симптомы включают кашель, жар и усталость. Некоторые люди переносят инфекцию бессимптомно. Коронавирус мутирует, создавая новые штаммы. Пандемия привела к изменениям в образе жизни.",
+        2: "Грипп — вирусное заболевание, поражающее дыхательные пути. Он отличается высокой заразностью. Грипп передаётся воздушно-капельным путём. Симптомы включают высокую температуру, слабость и головную боль. Ежегодные прививки помогают снизить заболеваемость. Грипп может вызывать осложнения, такие как пневмония. Частое мытьё рук снижает риск заражения. Вирус гриппа быстро мутирует, создавая новые штаммы. Профилактика включает избегание мест скопления людей. Раннее лечение помогает избежать серьёзных последствий.",
+        3: "Вирус иммунодефицита (ВИЧ) атакует иммунную систему. Он передаётся через кровь и другие жидкости тела. ВИЧ вызывает СПИД на поздних стадиях. Симптомы включают слабость, потерю веса и инфекции. 
