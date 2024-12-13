@@ -3,3 +3,4 @@
   ├── styles.css
   ├── script.ts
   └── tsconfig.json
+tsc
