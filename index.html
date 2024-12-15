@@ -1,124 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Компьютерные вирусы и защита от них</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Threats: История вирусов</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Компьютерные вирусы</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about-viruses">Что такое вирусы?</a></li>
-                    <li><a href="#types-of-viruses">Типы вирусов</a></li>
-                    <li><a href="#examples">Примеры</a></li>
-                    <li><a href="#protection">Как защититься?</a></li>
-                    <li><a href="#test">Тест</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="about-viruses">
-            <h2>Что такое компьютерные вирусы?</h2>
-            <p>
-                Компьютерные вирусы — это вредоносные программы, которые нарушают работу компьютера, крадут данные или 
-                наносят ущерб пользователю. Они могут распространяться через электронные письма, зараженные файлы, 
-                веб-сайты или даже устройства хранения данных, такие как флешки.
-            </p>
-            <p>
-                Первые вирусы появились в 1980-х годах и с тех пор стали более сложными. В современном мире вирусы часто используются 
-                для кибератак на крупные компании, правительственные организации и обычных пользователей.
-            </p>
-        </section>
-
-        <section id="types-of-viruses">
-            <h2>Типы вирусов</h2>
-            <div class="type">
-                <h3>Трояны</h3>
-                <p>Маскируются под полезное ПО, чтобы получить доступ к устройству пользователя. Используются для шпионажа или установки других вредоносных программ.</p>
-            </div>
-            <div class="type">
-                <h3>Черви</h3>
-                <p>Способны распространяться самостоятельно через сети, заражая множество устройств без участия пользователя.</p>
-            </div>
-            <div class="type">
-                <h3>Вымогатели</h3>
-                <p>Шифруют данные и требуют выкуп за их восстановление. Могут парализовать работу компаний и организаций.</p>
-            </div>
-            <div class="type">
-                <h3>Руткиты</h3>
-                <p>Скрывают наличие вредоносных программ, затрудняя их обнаружение и удаление.</p>
-            </div>
-            <div class="type">
-                <h3>Макровирусы</h3>
-                <p>Заражают документы, содержащие макросы, такие как файлы Word и Excel, и распространяются через них.</p>
-            </div>
-        </section>
-
-        <section id="examples">
-            <h2>Примеры известных вирусов</h2>
-            <div class="example">
-                <h3>ILOVEYOU</h3>
-                <p>
-                    Один из самых известных вирусов, распространившийся через электронные письма с темой "I love you". 
-                    Заразил миллионы компьютеров и уничтожил множество данных.
-                </p>
-            </div>
-            <div class="example">
-                <h3>WannaCry</h3>
-                <p>
-                    Этот вирус-вымогатель шифровал файлы и требовал выкуп. Он атаковал больницы, компании и правительственные учреждения.
-                </p>
-            </div>
-            <div class="example">
-                <h3>Stuxnet</h3>
-                <p>
-                    Этот вирус был разработан для атак на промышленное оборудование и использовался для саботажа ядерных объектов.
-                </p>
-            </div>
-        </section>
-
-        <section id="protection">
-            <h2>Как защититься от вирусов?</h2>
-            <ul>
-                <li>Установите антивирусное программное обеспечение и регулярно его обновляйте.</li>
-                <li>Будьте осторожны с подозрительными письмами, ссылками и вложениями.</li>
-                <li>Используйте брандмауэры для защиты сети.</li>
-                <li>Создавайте резервные копии данных на внешний накопитель или облако.</li>
-                <li>Регулярно обновляйте операционную систему и приложения.</li>
-                <li>Не подключайте к компьютеру незнакомые флешки и устройства.</li>
-            </ul>
-        </section>
-
-        <section id="test">
-            <h2>Тест: Проверьте свои знания о компьютерных вирусах</h2>
-            <form id="quiz-form">
-                <div class="question">
-                    <label>1. Какой вирус использовался для атаки на ядерные объекты?</label><br>
-                    <input type="radio" name="q1" value="ILOVEYOU"> ILOVEYOU<br>
-                    <input type="radio" name="q1" value="WannaCry"> WannaCry<br>
-                    <input type="radio" name="q1" value="Stuxnet"> Stuxnet<br>
-                </div>
-                <div class="question">
-                    <label>2. Какое ПО маскируется под легитимное приложение?</label><br>
-                    <input type="radio" name="q2" value="Руткиты"> Руткиты<br>
-                    <input type="radio" name="q2" value="Трояны"> Трояны<br>
-                    <input type="radio" name="q2" value="Черви"> Черви<br>
-                </div>
-                <button type="submit">Проверить ответы</button>
-            </form>
-            <div id="quiz-result"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Ваше имя. Все права защищены.</p>
-    </footer>
+  <header class="hero">
+    <nav class="navbar">
+      <a href="index.html" class="logo">CyberThreats</a>
+      <ul class="nav-links">
+        <li><a href="history.html">История</a></li>
+        <li><a href="types.html">Виды</a></li>
+        <li><a href="protection.html">Защита</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Добро пожаловать в мир киберугроз</h1>
+      <p>Узнайте больше о самых известных вирусах и о том, как они изменили цифровой мир.</p>
+      <a href="history.html" class="btn">Подробнее</a>
+    </div>
+  </header>
+  <main class="features">
+    <section class="feature">
+      <h2>Знаменитые вирусы</h2>
+      <p>От Melissa до Stuxnet — каждый вирус оставил свой след в истории.</p>
+      <img src="images/stuxnet.png" alt="Stuxnet Image">
+    </section>
+    <section class="feature">
+      <h2>Как защититься?</h2>
+      <p>Простые советы, которые помогут вам обезопасить свои данные.</p>
+      <img src="images/wannacry.png" alt="WannaCry Image">
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 CyberThreats | Все права защищены.</p>
+  </footer>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
